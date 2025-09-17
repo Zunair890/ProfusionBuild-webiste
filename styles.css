@@ -382,6 +382,12 @@ body { background: var(--bg); color: var(--text); }
   color: #c9d0d6 !important;
 }
 
+/* Override section background for dark about */
+.section.about-brief.enhanced {
+  background: #19212a !important;
+  background-image: none !important;
+}
+
 .cta-link { color: #fff; background: var(--primary); }
 .cta-link:hover { filter: brightness(.95); }
 
@@ -1070,7 +1076,11 @@ body { background: var(--bg); color: var(--text); }
 }
 
 /* === Contrast & Dark Panel Variant for Homepage About === */
-.about-brief.enhanced { background: #19212a; position: relative; isolation: isolate; }
+.about-brief.enhanced { 
+  background: #19212a !important; 
+  position: relative; 
+  isolation: isolate; 
+}
 .about-brief.enhanced::before { content: ""; position: absolute; inset: 0; background:
   radial-gradient(circle at 18% 22%, rgba(255,255,255,0.06), transparent 60%),
   radial-gradient(circle at 82% 78%, rgba(255,255,255,0.05), transparent 65%);
