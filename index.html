@@ -256,7 +256,57 @@
    
   </footer>
 
-  
+  <!-- AI Chatbot -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" aria-label="Open AI Assistant">
+      <img src="chatbot.png" alt="Chat Assistant" />
+    </button>
+    
+    <div id="chatbot-widget" class="chatbot-hidden">
+      <div class="chatbot-header">
+        <div class="chatbot-info">
+          <div class="chatbot-avatar">
+            <img src="chatbot.png" alt="Assistant" />
+          </div>
+          <div>
+            <h3>Profusion AI Assistant</h3>
+            <span class="chatbot-status">Your Trusted Construction Partner </span>
+          </div>
+        </div>
+        <button id="chatbot-close" aria-label="Close chat">×</button>
+      </div>
+      
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <img src="chatbot.png" alt="Assistant" />
+          </div>
+          <div class="message-content">
+            <p>👋 Hi! I'm your Profusion AI assistant. I can help with:</p>
+           
+            <p>What can I help you with today?</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input 
+          type="text" 
+          id="chatbot-input" 
+          placeholder="Ask about roofing, remodeling, or emergency repairs..."
+          autocomplete="off"
+          maxlength="500"
+        />
+        <button type="button" id="chatbot-send" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
