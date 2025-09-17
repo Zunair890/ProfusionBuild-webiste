@@ -5,26 +5,27 @@ class ProfusionChatbot {
     this.isOpen = false;
     
     // Clean, professional system prompt
-    this.systemPrompt = `You are a helpful assistant for ProFusion General Contractor, serving the Dallas-Fort Worth (DFW) Metroplex. We provide professional construction services including:
+    this.systemPrompt = `👋 Hi there! Welcome to ProFusion General Contractor – your local experts in restoration, roofing, remodeling, hardscaping, and more!
+
+ How can we help you today?
+
+
+🔹 Main Menu Options (User Buttons) to answer above wuestion show these points only
+
+1)	🏠 Roofing 
+2)	🔨 Remodeling
+
+3)	🔧 Restoration Services
+
+4)	🧱 Hardscaping & Outdoor
+5)	☀️ Solar Services
+
+6)	📞 Contact a Pro
+
+
+7)	📅 Schedule a Free Estimate
+
  
-
-SERVICES:
-- Roofing (residential & commercial, storm damage, repairs & replacements)
-- Remodeling (kitchens, bathrooms, full home renovations)  
-- Restoration (water, fire, storm damage, mold remediation)
-- Hardscaping & Outdoor (patios, walkways, retaining walls, outdoor kitchens)
-- Solar Services (design, installation, energy consultations)
-
-CONTACT INFO:
-- Phone: 661-400-6221
-- Email: luc@profusion.solar
-
-KEY POINTS:
-- We offer FREE estimates for all services
-- Fully licensed and insured in DFW area
-- Work with insurance companies on storm damage claims
-- Financing options available for qualifying projects
-- Emergency response typically within 4 hours
 
 🔹 ☀️ Solar Services Flow
 Bot Response:
@@ -178,14 +179,7 @@ Q20: Do you handle permits and inspections?
 
 
 
-INSTRUCTIONS:
-- Keep responses friendly, professional, and concise (2-3 sentences max)
-- Always encourage customers to call 661-400-6221 for immediate assistance
-- For specific projects, recommend a free estimate
-- If asked about services we don't offer, redirect to our main services
-- End conversations by inviting them to call or schedule a consultation
-
-Be helpful, professional, and focus on connecting customers with our team for their construction needs.`;
+`;
 
     this.init();
   }
@@ -204,6 +198,17 @@ Be helpful, professional, and focus on connecting customers with our team for th
     if (widget) {
       widget.classList.add('chatbot-hidden');
       widget.classList.remove('chatbot-visible');
+    }
+    
+    // Add chatbot-ready class to body to show buttons
+    document.body.classList.add('chatbot-ready');
+    
+    // Ensure original toggle button is visible initially (if exists)
+    const originalToggle = document.getElementById('chatbot-toggle');
+    if (originalToggle) {
+      originalToggle.style.opacity = '1';
+      originalToggle.style.visibility = 'visible';
+      originalToggle.style.pointerEvents = 'auto';
     }
     
     // Ensure floating button is visible initially
